@@ -1,0 +1,112 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+nav{
+    background-color: rgb(26, 26, 29);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+nav #menu-nav ul{
+    display: flex;
+
+}
+nav #menu-nav ul li{
+    list-style-type: none;
+    text-align: center;
+}
+nav #menu-nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+#banniere .img-banniere img{
+    width: 100vw;
+}
+
+#about{
+    padding: 5%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+#about .logo-about{
+    display: grid;
+    justify-content: center;
+}
+#about .about-p p{
+    color: rgb(77, 77, 77);
+}
+
+#pack{
+    background-color: rgb(51,77,92);
+    padding: 5%;
+    color: white;
+}
+#pack .titre{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+#pack .titre .packages{
+    display: grid;
+    justify-content: center;
+}
+#pack .model-pack{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+#pack .model-pack div{
+    padding: 5%;
+    text-align: center;
+}
+
+#outil{
+    padding: 5%;
+}
+#outil .titre-outil{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+#outil .titre-outil .tools{
+    display: grid;
+    justify-content: center;
+}
+#outil .model-outil{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+#outil .model-outil div{
+    padding: 5%;
+    text-align: center;
+}
+
+footer{
+    background-color: rgb(57,58,59);
+    color: white;
+    padding: 5%;
+}
+footer .menu-footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+footer .menu-footer div a img{
+    height: 50px;
+    padding: 2%;
+}
+footer .cgv p{
+    text-align: end;
+}
+
+@media screen and (max-width: 1024px) {
+    nav #logo-nav img{
+        width: 10em;
+    }
+    nav #menu-nav ul li img{
+        width: 5em;
+    }
+    nav #menu-nav ul li a{
+        font-size: 10px;
+    }
+}
+
