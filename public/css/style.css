@@ -1,5 +1,5 @@
 body{
-    margin: 0;
+    margin: 0 20% 0 20%;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -17,13 +17,17 @@ nav #menu-nav ul li{
     list-style-type: none;
     text-align: center;
 }
+nav #menu-nav ul li img{
+    height: 50px;
+}
 nav #menu-nav ul li a{
     text-decoration: none;
     color: white;
+    font-size: 10px;
 }
 
 #banniere .img-banniere img{
-    width: 100vw;
+    width: 100%;
 }
 
 #about{
@@ -34,6 +38,9 @@ nav #menu-nav ul li a{
 #about .logo-about{
     display: grid;
     justify-content: center;
+}
+#about .logo-about img{
+    padding-right: 30px;
 }
 #about .about-p p{
     color: rgb(77, 77, 77);
@@ -59,6 +66,18 @@ nav #menu-nav ul li a{
 #pack .model-pack div{
     padding: 5%;
     text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0fr 0fr 0fr;
+    justify-items: center;
+    align-items: end;
+}
+#pack .model-pack div img{
+    width: 200px;
+}
+#pack .model-pack div button{
+    height: 40px;
+    width: 100%;
 }
 
 #outil{
@@ -72,6 +91,9 @@ nav #menu-nav ul li a{
     display: grid;
     justify-content: center;
 }
+#outil .titre-outil .tools img{
+    height: 200px;
+}
 #outil .model-outil{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -79,6 +101,20 @@ nav #menu-nav ul li a{
 #outil .model-outil div{
     padding: 5%;
     text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0fr 0fr 0fr;
+    justify-items: center;
+    align-items: end;
+}
+#outil .model-outil div img{
+    height: 200px;
+}
+#outil .model-outil button{
+    height: 40px;
+    width: 100%;
+    background-color: rgb(57,58,59);
+    color: white;
 }
 
 footer{
@@ -98,15 +134,82 @@ footer .cgv p{
     text-align: end;
 }
 
-@media screen and (max-width: 1024px) {
-    nav #logo-nav img{
-        width: 10em;
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    body{
+        margin: 0;
     }
-    nav #menu-nav ul li img{
-        width: 5em;
-    }
-    nav #menu-nav ul li a{
-        font-size: 10px;
+    #about .logo-about img{
+        width: 200px;
     }
 }
+@media screen and (min-width: 320px) and (max-width: 767px){
+    body{
+        margin: 0;
+    }
 
+    nav{
+        display:flex;
+        flex-direction: column;
+    }
+    nav #menu-nav ul{
+        padding-left: 0;
+    }
+    nav #menu-nav ul li img{
+        height: 50px;
+    }
+    nav #menu-nav ul li a{
+        text-decoration: none;
+        color: white;
+        font-size: 7px;
+    }
+
+    #about{
+        grid-template-columns: 1fr;
+        text-align: justify;
+    }
+    #about .logo-about{
+        display: none;
+    }
+
+    #pack .titre{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    #pack .titre .packages{
+        display: none;
+    }
+    #pack .model-pack{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    #pack .model-pack div img{
+        width: 250px;
+    }
+
+    #outil .titre-outil{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    #outil .titre-outil .tools{
+        display: none;
+    }
+    #outil .model-outil{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    #outil .model-outil div img{
+        height: 250px;
+    }
+
+    footer .menu-footer{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    footer .cgv p{
+        text-align: center;
+    }
+
+}
